@@ -16,5 +16,11 @@
 <!-- <p>aad afrgh</p> -->
 <!-- <p>{{x--}}</p> inc/dcr not allowed-->
 
-<input type="text" [value]="name">Enter name
- 
+<input type="text" [value]="name">Enter name <br>
+
+<button (click)="clickevent()">click event</button>
+{{clickEventData}} <br>
+
+<input type="text" [(ngModel)]="city">Enter City <br>
+
+Entered City = {{city}} 

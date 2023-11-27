@@ -23,9 +23,10 @@ schoolName! : string;
 isMatch=true;
 x=7
 
-name ="Anuradha..."                                             //Property Binding    
+name ="Anuradha..."                                             //Property Binding  
+clickEventData:any;  
 
-
+city:any="Sangli"                                              //Two-way databinding       
 
   //    = : assignment operator: to asing value to the var/property
   //   == : eqality operator : it compare value only
@@ -34,5 +35,9 @@ name ="Anuradha..."                                             //Property Bindi
 
     test(){
       return 50*2;
+    }
+
+    clickevent(){                                               // Event Binding 
+      this.clickEventData =897654;
     }
 }
