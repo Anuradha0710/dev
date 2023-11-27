@@ -1,1 +1,20 @@
 <p>{{data}}</p>
+<p> {{amount}}</p>
+
+<!-- we can pass fun to the interpolation -->
+<div>{{test()}}</div>  
+
+<!-- assigment is not possible with interpolation -->
+<!-- <div>{{schoolName = "Bachpan"}}</div> -->
+
+<!-- we can use eqality operator with interpolation-->
+<!-- <div>{{amount == 1900000}}</div> overlaping of num and string dt error -->
+<div>{{amount === 900000}}</div>
+
+<div>{{amount*7}}</div>
+<p>{{!isMatch}}</p>
+<!-- <p>aad afrgh</p> -->
+<!-- <p>{{x--}}</p> inc/dcr not allowed-->
+
+<input type="text" [value]="name">Enter name
+ 
