@@ -34,4 +34,8 @@ export class HomeComponent {         //component class : properties,constructor,
     console.log("test calling...");
     
   }
+
+  directives(){
+    this.router.navigateByUrl('directives')
+  }
 }
