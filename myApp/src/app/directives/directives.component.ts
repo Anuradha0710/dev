@@ -30,7 +30,18 @@ export class DirectivesComponent {
 
 
 city = "pune"
-isShow = false;
+isShow = true;      //null/undefined/false >> false
+
+
+cars = ['i20',"Maruti","swift","jaguar"];
+showDiv = true;
+
+
+toggle(){
+  //this.showDiv = false;
+  this.showDiv = !this.showDiv;
+
+}
 
 
 
