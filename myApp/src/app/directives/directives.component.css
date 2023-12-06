@@ -4,3 +4,24 @@
     height: 100px;
     width: 100px;
 }
+
+.info{
+    color: aqua;
+    border: 1px solid blue;
+}
+
+.adminUser{
+    background-color:rgb(26, 254, 14) ;
+    height: 100px;
+    width: 100px;
+}
+.mentorUser{
+    background-color: rgb(221, 28, 66);
+    height: 100px;
+    width: 100px;
+}
+.studentUser{
+    background-color: rgb(136, 33, 233);
+    height: 100px;
+    width: 100px
+}

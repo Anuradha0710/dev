@@ -37,12 +37,15 @@ cars = ['i20',"Maruti","swift","jaguar"];
 showDiv = true;
 
 
+fruit="mango";
+
 toggle(){
   //this.showDiv = false;
   this.showDiv = !this.showDiv;
 
 }
 
+user:string="Mentor";
 
 
 

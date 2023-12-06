@@ -21,3 +21,40 @@
 <button (click)="toggle()">Toggle</button>
 
 
+<div [ngSwitch]="fruit">
+<div *ngSwitchCase="'mango'">my fav fruit is mango
+</div>
+<div *ngSwitchCase="'pinapple'">my fav fruit is pinapple
+</div>
+<div *ngSwitchCase="'pappaya'">my fav fruit is pappaya
+</div>
+</div>
+
+
+
+<div class="info adminUser">
+    I like Pune
+</div>
+<br>
+
+ <div [ngClass]="{'adminUser': user =='Admin',             
+                'mentorUser': user =='Mentor',
+                'studentUser': user =='Student'}">
+    Welcome to app
+</div>
+<br>
+<div [class.adminUser]="user =='Admin'"
+     [class.mentorUser]="user =='Mentor'"
+     [class.studentUser]="user =='Student'">
+
+    WelCome
+</div>
+<br>
+<div style="color: blue;">
+WelCome
+</div>
+
+ <div [ngStyle]="user =='Admin'?{'background-color':'yellow'} : {'background-color':'red'}">     <!--  ngStyle Directive -->
+    WelCome
+    </div>
+
