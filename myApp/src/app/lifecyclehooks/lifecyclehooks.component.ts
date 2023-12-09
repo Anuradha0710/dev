@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-lifecyclehooks',
@@ -11,7 +12,7 @@ export class LifecyclehooksComponent {
   // @Input() surName :any; //input prop
 
 
-  constructor(){
+  constructor(private dataService:DataService){
     console.log("constructor calling..");
     
   }
@@ -30,6 +31,8 @@ ngOnChenges(){
   
 }
 ngOnInit(){
+
+  this.name = this.dataService.userName;
   console.log("Oninit calling..");
   
 }
