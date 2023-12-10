@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DatabindingComponent } from '../databinding/databinding.component';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-directives',
@@ -6,7 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./directives.component.css']
 })
 export class DirectivesComponent {
+  user:string="Mentor";
+  city = "pune"
+ isShow = true;      //null/undefined/false >> false
 
+
+ cars = ['i20',"Maruti","swift","jaguar"];
+ showDiv = true;
+
+
+ fruit="mango";
+
+
+ constructor(private dataService : DataService){}
 
   //directives are used to manipulate the DOM. By using Angular directives,
 // you can change the appearance, behavior or a layout of a DOM element. 
@@ -29,15 +43,7 @@ export class DirectivesComponent {
 // ngStyle Directive: The ngStyle directive facilitates you to modify the style of an HTML element using the expression. You can also use ngStyle directive to dynamically change the style of your HTML element.
 
 
-city = "pune"
-isShow = true;      //null/undefined/false >> false
 
-
-cars = ['i20',"Maruti","swift","jaguar"];
-showDiv = true;
-
-
-fruit="mango";
 
 toggle(){
   //this.showDiv = false;
@@ -45,9 +51,13 @@ toggle(){
 
 }
 
-user:string="Mentor";
 
 
+getDat(){
+  this.user =this.dataService.userName;
+  console.log("username",this.user);
+  
+}
 
 
 }

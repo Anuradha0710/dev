@@ -21,6 +21,8 @@ export class HomeComponent {         //component class : properties,constructor,
 
   ngOnInit(){
     this.dataService.userName = this.name;
+    console.log("set",this.dataService.userName);
+    
   }
 
 
