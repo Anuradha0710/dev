@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DataService } from '../data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-databinding',
@@ -28,6 +30,7 @@ clickEventData:any;
 
 city:any="Sangli"                                              //Two-way databinding       
 
+constructor(private dataservice:DataService ,private router :Router){}
   //    = : assignment operator: to asing value to the var/property
   //   == : eqality operator : it compare value only
   //  === : it compare value as well as data type  
@@ -39,5 +42,11 @@ city:any="Sangli"                                              //Two-way databin
 
     clickevent(){                                               // Event Binding 
       this.clickEventData =897654;
+    }
+
+
+    assigmentVal(){
+      this.dataservice.userName="Anu"; 
+      this.router.navigateByUrl('lifecycleHooks')
     }
 }
