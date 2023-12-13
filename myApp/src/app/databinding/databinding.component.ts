@@ -45,7 +45,7 @@ constructor(private dataservice:DataService ,private router :Router){}
     }
 
 
-    assigmentVal(){
+    assigntVal(){
       this.dataservice.userName="Anu"; 
       this.router.navigateByUrl('lifecycleHooks')
     }

@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent {
+city = "Mumbai";
+state:any;
 
+dataFromChild(event:any){
+  console.log(event);
+  this.state=event;
+}
 }
