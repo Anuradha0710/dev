@@ -1,0 +1,18 @@
+.main_container{
+    font-size: 30px;
+    color: rgb(245, 244, 244);
+    text-align: center;
+    height:150vh;
+    background-image: url("https://www.adobe.com/acrobat/hub/media_173d13651460eb7e12c0ef4cf8410e0960a20f0ee.jpeg?width=2000&format=webply&optimize=medium");
+    background-size:100%;
+    background-repeat: no-repeat;
+}
+.hading1_main{
+    padding-top: 20vh;
+
+}
+
+.main_container > h5{
+    font-size: 20px;
+    font-weight: 100;
+}
