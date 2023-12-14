@@ -9,7 +9,7 @@ import { DataService } from '../data.service';
 export class LifecyclehooksComponent {
 
   name:any; //normal prop
-  // @Input() surName :any; //input prop
+  @Input() surName :any; //input prop
 
 
   constructor(private dataService:DataService){
@@ -26,7 +26,7 @@ export class LifecyclehooksComponent {
 //7.ngAfterViewChecked()
 //8.ngOnDestroy
 
-ngOnChenges(){
+ngOnChanges(){
   console.log("OnChenges calling..");
   
 }
