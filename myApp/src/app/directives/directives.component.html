@@ -1,4 +1,4 @@
-<p>directives works!</p>
+<!-- <p>directives works!</p>
 
 <div *ngIf="isShow">
     <p>{{city}}</p>
@@ -54,10 +54,29 @@
 WelCome
 </div>
 
- <div [ngStyle]="user =='Admin'?{'background-color':'yellow'} : {'background-color':'red'}">     <!--  ngStyle Directive -->
-    WelCome
+ <div [ngStyle]="user =='Admin'?{'background-color':'yellow'} : {'background-color':'red'}"> -->    <!--  ngStyle Directive -->
+    <!-- WelCome
     </div>
 
 
 
     <button (click)="getDat()">get data</button>
+    {{user}} --> 
+
+    <div class="table-cont">
+        <h1>Table</h1>
+        <table class="table-cont">
+            <tr>
+                <th *ngFor=" let headings of tableHeading">{{headings}}</th>
+            </tr>
+            <tr *ngFor = " let data of tableData">
+                <td>{{data.name}}</td>
+                <td>{{data.contact}}</td>
+                <td>{{data.city}}</td>
+                <td>{{data.age}}</td>
+                
+
+
+            </tr>
+        </table>
+    </div>

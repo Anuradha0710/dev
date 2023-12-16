@@ -19,6 +19,22 @@ export class DirectivesComponent {
 
  fruit="mango";
 
+tableHeading=["Name","Contact","City","Age"];
+
+tableData=[
+  {name:"Anuradha",contact:1234567890,city:"Sangli",age:22},
+  {name:"om",contact:1234567890,city:"Sangli",age:22},
+  {name:"radha",contact:1234567890,city:"Sangli",age:22},
+  {name:"Anu",contact:1234567890,city:"Sangli",age:22},
+  {name:"Anuprita",contact:1234567890,city:"Sangli",age:22},
+  {name:"Anushaka",contact:1234567890,city:"Sangli",age:22},
+  {name:"Anuja",contact:1234567890,city:"Sangli",age:22},
+  {name:"Angha",contact:1234567890,city:"Sangli",age:22},
+  {name:"Aannya",contact:1234567890,city:"Sangli",age:22},
+  {name:"Aanaa",contact:1234567890,city:"Sangli",age:22},
+  {name:"Krishna",contact:1234567890,city:"Sangli",age:22}
+]
+
 
  constructor(private dataService : DataService){}
 
