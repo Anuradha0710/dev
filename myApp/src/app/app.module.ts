@@ -15,7 +15,8 @@ import { ChildComponent } from './child/child.component';
 import { SubComponent } from './sub/sub.component';
 import { Sub1Component } from './sub1/sub1.component';
 import { Sub2Component } from './sub2/sub2.component';
-import { SearchDirective } from './search.directive';
+import { SearchPipe } from './search.pipe';
+
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { SearchDirective } from './search.directive';
     SubComponent,
     Sub1Component,
     Sub2Component,
-    SearchDirective,
+    SearchPipe,
+   
    
   ],
   imports: [           //modules
