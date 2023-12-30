@@ -16,6 +16,7 @@ import { SubComponent } from './sub/sub.component';
 import { Sub1Component } from './sub1/sub1.component';
 import { Sub2Component } from './sub2/sub2.component';
 import { SearchPipe } from './search.pipe';
+import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
 
 
 
@@ -34,6 +35,7 @@ import { SearchPipe } from './search.pipe';
     Sub1Component,
     Sub2Component,
     SearchPipe,
+    TemplatedrivenformComponent,
    
    
   ],

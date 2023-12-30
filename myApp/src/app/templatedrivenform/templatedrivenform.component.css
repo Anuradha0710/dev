@@ -1,0 +1,8 @@
+.form-container{
+    height: 250px;
+    margin: auto;
+    background-color: burlywood;
+    border: 2px solid brown;
+    width: 250px;
+    text-align: center;
+}
