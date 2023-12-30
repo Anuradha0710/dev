@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class TemplatedrivenformComponent {
 
+  Submit(form:any){
+    console.log("form obj",form);
+    
+  }
 }

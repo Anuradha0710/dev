@@ -3,6 +3,9 @@
     margin: auto;
     background-color: burlywood;
     border: 2px solid brown;
-    width: 250px;
+    width: 300px;
     text-align: center;
+}
+.error{
+    color: red;
 }
