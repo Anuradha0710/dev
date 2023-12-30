@@ -28,6 +28,9 @@
 tr,td,th,table{
     border: 2px solid orange;
     background-color: rgb(181, 112, 245);
+    text-align: center;
+    padding: 5px 5px;
+    margin: auto;
 
 }
 .table-cont{

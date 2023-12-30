@@ -14,9 +14,12 @@ export class HomeComponent {         //component class : properties,constructor,
 
   city : string = "Satara";  //property
   surName : any = "234567788"
-  name : string ="Anuradha"
+  name : string ="Anuradha yadav"
   name2? : string;                                   //?/!
   name3 : any
+
+  pipe:boolean=false;
+  date = new Date()
   constructor(private router: Router, private dataService:DataService){}  //constructor section
 
   ngOnInit(){
@@ -44,5 +47,9 @@ export class HomeComponent {         //component class : properties,constructor,
 
   directives(){
     this.router.navigateByUrl('directives')
+  }
+
+  purePipes(){
+    this.pipe=true;
   }
 }

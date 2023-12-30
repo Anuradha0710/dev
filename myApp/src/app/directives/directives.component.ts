@@ -18,7 +18,7 @@ export class DirectivesComponent {
 
 
  fruit="mango";
-
+ searchText:any;
 tableHeading=["Name","Contact","City","Age"];
 
 tableData=[
@@ -31,7 +31,7 @@ tableData=[
   {name:"Anuja",contact:1234567890,city:"Sangli",age:22},
   {name:"Angha",contact:1234567890,city:"Sangli",age:22},
   {name:"Aannya",contact:1234567890,city:"Sangli",age:22},
-  {name:"Aanaa",contact:1234567890,city:"Sangli",age:22},
+  {name:"Ganesh",contact:1234567890,city:"Sangli",age:22},
   {name:"Krishna",contact:1234567890,city:"Sangli",age:22}
 ]
 

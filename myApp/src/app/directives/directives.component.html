@@ -64,12 +64,13 @@ WelCome
     {{user}} --> 
 
     <div class="table-cont">
+        <input type="search" [(ngModel)]="searchText">
         <h1>Table</h1>
-        <table class="table-cont">
+        <table >
             <tr>
                 <th *ngFor=" let headings of tableHeading">{{headings}}</th>
             </tr>
-            <tr *ngFor = " let data of tableData">
+            <tr *ngFor = " let data of tableData | search : searchText">
                 <td>{{data.name}}</td>
                 <td>{{data.contact}}</td>
                 <td>{{data.city}}</td>
