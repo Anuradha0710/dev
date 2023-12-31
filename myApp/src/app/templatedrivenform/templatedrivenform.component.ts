@@ -11,4 +11,9 @@ export class TemplatedrivenformComponent {
     console.log("form obj",form);
     
   }
+
+  singUpForm(){
+    console.log("...");
+    
+  }
 }

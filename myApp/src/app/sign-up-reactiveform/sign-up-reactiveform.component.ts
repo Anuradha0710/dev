@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-up-reactiveform',
@@ -7,4 +8,19 @@ import { Component } from '@angular/core';
 })
 export class SignUpReactiveformComponent {
 
+  singUpForm! : FormGroup;
+
+  constructor(private formBuilder: FormBuilder){}
+
+  ngOnInit(){
+
+    this.formLoad()
+  }
+
+  formLoad(){
+    this.singUpForm = this.formBuilder.group({
+      name:['',[Validators.required]],
+      mobile:[''],
+    })
+  }  
 }
