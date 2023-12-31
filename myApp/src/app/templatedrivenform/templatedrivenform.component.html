@@ -1,19 +1,20 @@
 <div>
-    <form class="form-container" #loginForm = "ngForm">
+    <form class="form-container" #loginForm = "ngForm" autocomplete="off">
         <h2>Login</h2>
         <div>
             <label> User Name:</label><br>
-            <input type="text"ngModel #userName="ngModel" name="userName" required><br>
-            <span *ngIf="userName?.errors?.['required']" class="error">User Name is required</span>
+            <input type="text"ngModel #userName="ngModel" name="userName" required maxlength="7"><br>
+            <span *ngIf="userName?.errors?.['required'] && userName.touched" class="error">User Name is required</span>
         </div>
         <div>
             <label>Password:</label><br>
-            <input type="text" #password="ngModel" ngModel name="password">
-            <span *ngIf="password.errors?.['required']">password is required</span>
+            <input type="text" #password="ngModel" ngModel name="password" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,12}$"><br>
+            <span *ngIf="password.errors?.['required'] && password.touched" class="error">password is required</span>
+            <span *ngIf="password.errors?.['pattern']" class="error" >pattern not match</span>
         </div>
         <br>
         <div>
-            <button (click)="Submit(loginForm.value)">Submit</button>
+            <button (click)="Submit(loginForm)" [disabled]="!loginForm.valid">Submit</button>
         </div>
         <br>
         <div>
