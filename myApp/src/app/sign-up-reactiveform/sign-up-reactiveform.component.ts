@@ -20,7 +20,15 @@ export class SignUpReactiveformComponent {
   formLoad(){
     this.singUpForm = this.formBuilder.group({
       name:['',[Validators.required]],
-      mobile:[''],
+      mobile:[,[Validators.maxLength(10)]],
+      Pancard:['',[Validators.pattern('^[A-Z]{5}[0-9]{4}[A-Z]{1}$'),Validators.maxLength(10)]],
+      email:[''],
+      pass:[''],
+      confirmPass:['']
     })
   }  
+  submit(){
+    console.log(this.singUpForm.value);
+    
+  }
 }

@@ -2,15 +2,31 @@
     <form [formGroup]="singUpForm">
         <label>Name</label><br>
         <input type="text" formControlName="name"><br>
+        <span class="err" *ngIf="singUpForm.get('name')?.hasError('required')
+        && singUpForm.get('name')?.touched">Name is required</span><br>
+
         <label>Mob No</label><br>
         <input type="text" formControlName="mobile"><br>
+        <span class="err" *ngIf="singUpForm.get('mobile')?.hasError('maxlength')">
+            Maximum 10 numbers are allowed</span><br>
+
         <label>Pancard No</label><br>
-        <input type="text"><br>
+        <input type="text" formControlName="Pancard"><br>
+        <span class="err" *ngIf="singUpForm.get('Pancard')?.hasError('pattern')
+         && !singUpForm.get('Pancard')?.hasError('maxlength')">
+           Invalid pan number</span>
+           <span class="err" *ngIf="singUpForm.get('Pancard')?.hasError('maxlength') ">
+            maxlength is 10 </span><br>
+
         <label>Email</label><br>
-        <input type="text"><br>
+        <input type="text" formControlName="email"><br>
+
         <label>Password</label><br>
-        <input type="text"><br>
+        <input type="text" formControlName="pass"><br>
+
         <label>Confirm Password</label><br>
-        <input type="text">
+        <input type="text" formControlName="confirmPass"><br>
+
+        <button (click)="submit()">Submit</button>
     </form>
 </div>
