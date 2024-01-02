@@ -25,9 +25,20 @@ export class SignUpReactiveformComponent {
       Pancard:['',[Validators.pattern('^[A-Z]{5}[0-9]{4}[A-Z]{1}$'),Validators.maxLength(10)]],
       email:[''],
       pass:[''],
-      confirmPass:['']
+      confirmPass:[''],
+      city:["",[this.spacesNotAllowed]]
     })
-  }  
+  } 
+  
+  spacesNotAllowed(inputVal:any){
+    
+    const value=inputVal.value;
+    let isIncludeSpace = /\s{2,}/.test(value)
+    return isIncludeSpace ? {spacesNotAllowed: true}:null;
+
+    //value.toLowerCase().includes("clone") //to show error when clone word got entered
+
+  }
   submit(){
     console.log(this.singUpForm.value);
     

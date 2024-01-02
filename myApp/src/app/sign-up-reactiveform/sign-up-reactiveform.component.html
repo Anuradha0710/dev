@@ -1,12 +1,12 @@
 <div>
     <form [formGroup]="singUpForm" class="form-container">
         <label>Name</label><br>
-        <input type="text" formControlName="name"><br>
+        <input type="text" formControlName="name" maxlength="10"><br>
         <span class="err" *ngIf="singUpForm.get('name')?.hasError('required')
         && singUpForm.get('name')?.touched">Name is required</span><br>
 
         <label>Mob No</label><br>
-        <input type="text" formControlName="mobile"><br>
+        <input type="text" formControlName="mobile" appNumbersOnly><br>
         <span class="err" *ngIf="singUpForm.get('mobile')?.hasError('maxlength')">
             Maximum 10 numbers are allowed</span><br>
 
@@ -29,7 +29,13 @@
 
         <label>Confirm Password</label><br>
         <input type="text" formControlName="confirmPass">
-        <br><br><br>
+        <br>
+        <label>City</label><br>
+        <input type="text" formControlName="city">
+        <br>
+        <div class="err" *ngIf="singUpForm.get('city')?.hasError('spaceNotAllowed')">
+            Plase remove spaces,more than one space is not allowed</div>
+        <br><br>
 
         <button (click)="submit()">Submit</button>
     </form>

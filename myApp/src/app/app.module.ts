@@ -18,6 +18,7 @@ import { Sub2Component } from './sub2/sub2.component';
 import { SearchPipe } from './search.pipe';
 import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
 import { SignUpReactiveformComponent } from './sign-up-reactiveform/sign-up-reactiveform.component';
+import { NumbersOnlyDirective } from './numbers-only.directive';
 
 
 
@@ -38,6 +39,7 @@ import { SignUpReactiveformComponent } from './sign-up-reactiveform/sign-up-reac
     SearchPipe,
     TemplatedrivenformComponent,
     SignUpReactiveformComponent,
+    NumbersOnlyDirective,
    
    
   ],
