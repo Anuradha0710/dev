@@ -26,9 +26,11 @@
         <i *ngIf="show" (click)="toShowPassword()" class="bi bi-eye-fill eye-fill2"></i>
         <i *ngIf="!show" (click)="toShowPassword()" class="bi-eye-slash-fill eye-slash-fill"></i>
         <br>
+        <div class="err" *ngIf="singUpForm.get('pass')?.hasError('passwordNotMatch')">
+            Passwordand confirm passwod not matched </div>
 
         <label>Confirm Password</label><br>
-        <input type="text" formControlName="confirmPass">
+        <input type="text" formControlName="confirmPass" minlength="5" maxlength="5"><br>
         <br>
         <label>City</label><br>
         <input type="text" formControlName="city">

@@ -24,8 +24,8 @@ export class SignUpReactiveformComponent {
       mobile:[,[Validators.maxLength(10)]],
       Pancard:['',[Validators.pattern('^[A-Z]{5}[0-9]{4}[A-Z]{1}$'),Validators.maxLength(10)]],
       email:[''],
-      pass:[''],
-      confirmPass:[''],
+      pass:['',[this.PasswordMatch]],
+      confirmPass:['',[this.confirmPasswordMatch]],
       city:["",[this.spacesNotAllowed]]
     })
   } 
@@ -39,6 +39,24 @@ export class SignUpReactiveformComponent {
     //value.toLowerCase().includes("clone") //to show error when clone word got entered
 
   }
+
+  PasswordMatch(PasswordValue:any){
+    console.log('..............');
+    
+    // let PassValue=PasswordValue.value;
+    // let confirmPass= this.singUpForm.value?.confirmPass
+    // if(PassValue.length >=5){
+    //   PassValue ! == confirmPass ?{passwordNotMatch:true}:null; 
+    // }
+    // return
+  }
+
+  confirmPasswordMatch(){
+
+
+  }
+
+
   submit(){
     console.log(this.singUpForm.value);
     
