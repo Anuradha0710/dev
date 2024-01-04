@@ -19,6 +19,8 @@ import { SearchPipe } from './search.pipe';
 import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
 import { SignUpReactiveformComponent } from './sign-up-reactiveform/sign-up-reactiveform.component';
 import { NumbersOnlyDirective } from './numbers-only.directive';
+import { Viewchild1Component } from './viewchild1/viewchild1.component';
+import { Viewchild2Component } from './viewchild2/viewchild2.component';
 
 
 
@@ -40,6 +42,8 @@ import { NumbersOnlyDirective } from './numbers-only.directive';
     TemplatedrivenformComponent,
     SignUpReactiveformComponent,
     NumbersOnlyDirective,
+    Viewchild1Component,
+    Viewchild2Component,
    
    
   ],

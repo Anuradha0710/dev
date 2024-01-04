@@ -11,6 +11,7 @@ export class SignUpReactiveformComponent {
   singUpForm! : FormGroup;
   show:boolean=false;
   showPassword:boolean=false;
+  misMatch: boolean=false;
   constructor(private formBuilder: FormBuilder){}
 
   ngOnInit(){
@@ -24,8 +25,8 @@ export class SignUpReactiveformComponent {
       mobile:[,[Validators.maxLength(10)]],
       Pancard:['',[Validators.pattern('^[A-Z]{5}[0-9]{4}[A-Z]{1}$'),Validators.maxLength(10)]],
       email:[''],
-      pass:['',[this.PasswordMatch]],
-      confirmPass:['',[this.confirmPasswordMatch]],
+      pass:[''],
+      confirmPass:[''],
       city:["",[this.spacesNotAllowed]]
     })
   } 
@@ -40,19 +41,30 @@ export class SignUpReactiveformComponent {
 
   }
 
-  PasswordMatch(PasswordValue:any){
-    console.log('..............');
+  // PasswordMatch(PasswordValue:any){
+  //   console.log('..............');
     
-    // let PassValue=PasswordValue.value;
-    // let confirmPass= this.singUpForm.value?.confirmPass
-    // if(PassValue.length >=5){
-    //   PassValue ! == confirmPass ?{passwordNotMatch:true}:null; 
-    // }
-    // return
+  //   // let PassValue=PasswordValue.value;
+  //   // let confirmPass= this.singUpForm.value?.confirmPass
+  //   // if(PassValue.length >=5){
+  //   //   PassValue ! == confirmPass ?{passwordNotMatch:true}:null; 
+  //   // }
+  //   // return
+  // }
+
+  passwordMatchValidator(){
+    const password=this.singUpForm.get('pass')?.value;
+    const confirmPassword=this.singUpForm.get('confirmPass')?.value;
+
+    if(password != confirmPassword){
+      this.misMatch=true;
+    }else{
+      this.misMatch=false;
+    }
   }
 
   confirmPasswordMatch(){
-
+     
 
   }
 
