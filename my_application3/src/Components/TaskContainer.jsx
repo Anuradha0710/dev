@@ -2,7 +2,9 @@ import React from 'react'
 import SingleTask from './SingleTask'
 
 let arr =["go to gym","read some books","do some exercise","go for a walk"]
-const TaskContainer = () => {
+const TaskContainer = ({task}) => {
+
+  arr.push(task)
   return (
     <div style={{ border:"5px solid blue",marginTop:"50px"}}>
       {arr.map(function(ele,index){
