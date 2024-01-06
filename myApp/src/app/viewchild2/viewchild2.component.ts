@@ -8,8 +8,10 @@ import { Component } from '@angular/core';
 export class Viewchild2Component {
   name ="Anu";
 
-  setValue(){
-    console.log(this.name);
+  city:any;
+
+  // setValue(){
+  //   console.log(this.name);
     
-  }
+  // }
 }

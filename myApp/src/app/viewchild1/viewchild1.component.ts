@@ -11,8 +11,12 @@ export class Viewchild1Component {
 
 
   @ViewChild ('city') cityName! : ElementRef
-  @ViewChild(Viewchild2Component) viewCompo! : Viewchild2Component
+  @ViewChild(Viewchild2Component) viewCompo! : Viewchild2Component;
+  @ViewChild('confirmation') confirmation! : ElementRef
   constructor(private cdr:ChangeDetectorRef) { }
+
+  name1:any;
+  edit = false;
 
   ngAfterViewInit(){
     
@@ -20,7 +24,11 @@ export class Viewchild1Component {
     this.cityName.nativeElement.innerHTML ='Pune'
     console.log(this.cityName.nativeElement.innerHTML);
     //console.log("name",this.viewCompo.name);
-    this.viewCompo.name ="Anu"
+    this.name1 =this.viewCompo.name;//get
+    this.viewCompo.city = 'Sangli'//set
+    if(this.edit){
+      this.confirmation.nativeElement.innerHTML='Are you sure You wany to delete this record';
+    }
     this.cdr.detectChanges();
   }
 }
