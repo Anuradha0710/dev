@@ -29,7 +29,8 @@ const routes: Routes = [
   { path : "subject2" ,component : Sub2Component},
   { path : "templateForm" , component : TemplatedrivenformComponent},
   { path : "singUpForm", component : SignUpReactiveformComponent},
-  { path : "viewChild1" , component : Viewchild1Component}
+  { path : "viewChild1" , component : Viewchild1Component},
+  { path : "admin" ,loadChildren:()=>import('./admin/admin.module').then(m=>m.AdminModule)}
 
 ];
 
