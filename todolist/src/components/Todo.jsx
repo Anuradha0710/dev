@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Todo({props}) {
+function Todo(props) {
 
    let inputval ="";
   return (
@@ -16,7 +16,8 @@ function Todo({props}) {
       <div>
         {props.task.map(function(ele){
             return <p style={{marginLeft:"20px",color:"black",fontWeight:"900",fontSize:"25px"}}>
-                {ele}
+                {ele.id}
+                {ele.todo}
                 </p>
         })}
       </div>
