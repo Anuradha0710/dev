@@ -1,0 +1,36 @@
+{
+  "user": [
+    {
+      "id": "b8a8",
+      "name": "Anu",
+      "mobile": "1212121212",
+      "Pancard": "",
+      "email": "yadavanu@gmail.com",
+      "pass": "radha",
+      "confirmPass": "radha",
+      "city": "Sangli"
+    },
+    {
+      "id": "30eb",
+      "name": "om",
+      "mobile": "1234567890",
+      "Pancard": "",
+      "email": "omshree@gmail.com",
+      "pass": "omi",
+      "confirmPass": "omi",
+      "city": "pune"
+    },
+    {
+      "id": "0878",
+      "name": "abc",
+      "mobile": "1111111111",
+      "Pancard": "",
+      "email": "",
+      "pass": "",
+      "confirmPass": "",
+      "city": "aaa"
+    }
+  ],
+  "admin": [],
+  "owner": []
+}

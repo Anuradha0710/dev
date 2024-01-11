@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { DataService } from '../data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up-reactiveform',
@@ -12,7 +14,10 @@ export class SignUpReactiveformComponent {
   show:boolean=false;
   showPassword:boolean=false;
   misMatch: boolean=false;
-  constructor(private formBuilder: FormBuilder){}
+  postApiResponse:any;
+  constructor(private formBuilder: FormBuilder ,
+    private dataService : DataService,
+    private router:Router){}
 
   ngOnInit(){
 
@@ -68,10 +73,32 @@ export class SignUpReactiveformComponent {
 
   }
 
-
-  submit(){
-    console.log(this.singUpForm.value);
+  // submit(){
+  //   let endPoint='user';
     
+  //   console.log(this.signUpForm.value);
+  //   this.dataService.postApiCall(endPoint,this.signUpForm.value).subscribe(res=>{
+  //     this.postApiResponse  = res;
+  //   })
+
+  //      this.router.navigateByUrl('home') ; 
+
+  // }
+
+
+  //API:Application programing Interface
+
+  async submit(){
+    let endPoint='user';
+    console.log(this.singUpForm.value);
+    await this.dataService.postApiCall(endPoint,this.singUpForm.value).toPromise() 
+    if(this.postApiResponse?.id){
+      this.router.navigateByUrl('home');
+    }
+    else{
+      this.router.navigateByUrl('singUpForm');
+    }
+
   }
   toShowPassword(){
     // this.showPassword=true;
