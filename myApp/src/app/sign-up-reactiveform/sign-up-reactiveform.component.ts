@@ -91,7 +91,7 @@ export class SignUpReactiveformComponent {
   async submit(){
     let endPoint='user';
     console.log(this.singUpForm.value);
-    await this.dataService.postApiCall(endPoint,this.singUpForm.value).toPromise() 
+    this.postApiResponse= await this.dataService.postApiCall(endPoint,this.singUpForm.value).toPromise() 
     if(this.postApiResponse?.id){
       this.router.navigateByUrl('home');
     }

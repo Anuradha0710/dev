@@ -1,7 +1,7 @@
 {
   "user": [
     {
-      "id": "b8a8",
+      "id": 1,
       "name": "Anu",
       "mobile": "1212121212",
       "Pancard": "",
@@ -11,26 +11,97 @@
       "city": "Sangli"
     },
     {
-      "id": "30eb",
-      "name": "om",
-      "mobile": "1234567890",
+      "id": "2",
+      "name": "radha",
+      "mobile": "187665212",
       "Pancard": "",
-      "email": "omshree@gmail.com",
-      "pass": "omi",
-      "confirmPass": "omi",
-      "city": "pune"
+      "email": "yadavradha@gmail.com",
+      "pass": "radha",
+      "confirmPass": "radha",
+      "city": "Sangli"
     },
     {
-      "id": "0878",
-      "name": "abc",
-      "mobile": "1111111111",
+      "id": "d364",
+      "name": "om",
+      "mobile": "8765432123",
       "Pancard": "",
       "email": "",
-      "pass": "",
-      "confirmPass": "",
-      "city": "aaa"
+      "pass": "om",
+      "confirmPass": "om",
+      "city": "satara"
+    },
+    {
+      "id": "9d92",
+      "name": "jay",
+      "mobile": "3456543213",
+      "Pancard": "KJHGF1234A",
+      "email": "",
+      "pass": "jay",
+      "confirmPass": "jay",
+      "city": "Pun"
+    },
+    {
+      "id": "56d4",
+      "name": "pooja",
+      "mobile": "098765432",
+      "Pancard": "KJHGO1234H",
+      "email": "pooja@gmail.com",
+      "pass": "pooja",
+      "confirmPass": "pooja",
+      "city": "nashik"
     }
   ],
-  "admin": [],
+  "admin": [
+    {
+      "id": 1,
+      "name": "Anu",
+      "mobile": "1212121212",
+      "Pancard": "",
+      "email": "yadavanu@gmail.com",
+      "pass": "radha",
+      "confirmPass": "radha",
+      "city": "Sangli"
+    },
+    {
+      "id": "2",
+      "name": "radha",
+      "mobile": "187665212",
+      "Pancard": "",
+      "email": "yadavradha@gmail.com",
+      "pass": "radha",
+      "confirmPass": "radha",
+      "city": "Sangli"
+    },
+    {
+      "id": "d364",
+      "name": "om",
+      "mobile": "8765432123",
+      "Pancard": "",
+      "email": "",
+      "pass": "om",
+      "confirmPass": "om",
+      "city": "satara"
+    },
+    {
+      "id": "9d92",
+      "name": "jay",
+      "mobile": "3456543213",
+      "Pancard": "KJHGF1234A",
+      "email": "",
+      "pass": "jay",
+      "confirmPass": "jay",
+      "city": "Pun"
+    },
+    {
+      "id": "56d4",
+      "name": "pooja",
+      "mobile": "098765432",
+      "Pancard": "KJHGO1234H",
+      "email": "pooja@gmail.com",
+      "pass": "pooja",
+      "confirmPass": "pooja",
+      "city": "nashik"
+    }
+  ],
   "owner": []
 }

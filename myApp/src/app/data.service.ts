@@ -29,4 +29,9 @@ postApiCall(endPoint:any,formData:any){
   return this.httpClient.post(url,formData)
 }
 
+getApiCall(urlEndPoint : string){
+   let apiurl = this.url + '/' + urlEndPoint + '/' + 2;
+   return this.httpClient.get(apiurl);
+}
+
 }
